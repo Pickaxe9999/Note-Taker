@@ -27,9 +27,6 @@ Branch Layout
 feature/note-page
 - connect the note page to render properly to the user
 
-feature/save-icon
-- when the user completes a new note then a save button should be presented to save the note to the left hand column
-
 feature/note-pull
 -when the user clicks a note in the lefthand column then the note should be presented back on the right hand side
 
