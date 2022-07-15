@@ -2,7 +2,7 @@ const {saveNote} = require('../../utils/index.js');
 const router = require('express').Router();
 const db = require('../../db/db.json');
 
-//route for homepage
+//create a new note
 router.post('/notes', (req, res) => {
     //save the input of the user to variable note
     const note = (req.body);
@@ -14,7 +14,7 @@ router.post('/notes', (req, res) => {
 
 //retrive all notes
 router.get('/notes', (req, res) =>{
-    res.json(db);
+    return res.json(db);
 })
 
 
