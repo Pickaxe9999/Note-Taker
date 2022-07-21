@@ -30,5 +30,5 @@ feature/note-page
 feature/note-pull
 -when the user clicks a note in the lefthand column then the note should be presented back on the right hand side
 
-feature/new-note
--when the user clicks the write icon then empty fields are presented for the user to write a new note
+feature/note-delete
+-when the user clicks delete on a note on the right hand side then the note is deleted from the db

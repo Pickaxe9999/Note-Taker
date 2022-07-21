@@ -1,4 +1,4 @@
-const {saveNote} = require('../../utils/index.js');
+const {saveNote, deleteNote} = require('../../utils/index.js');
 const router = require('express').Router();
 const db = require('../../db/db.json');
 
@@ -15,6 +15,13 @@ router.post('/notes', (req, res) => {
 //retrive all notes
 router.get('/notes', (req, res) =>{
     return res.json(db);
+})
+
+//delete a single note
+router.delete('/notes/:id', (req, res) => {
+    const id = req.params.id;
+    const updatedDb = deleteNote(id, db);
+    res.json(updatedDb);
 })
 
 
