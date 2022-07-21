@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const shortUniqueId = require('short-unique-id');
 
 //save a note to the database
@@ -10,31 +8,19 @@ function saveNote(note, notes) {
     note.id = id();
 
     notes.push(note);
-    fs.writeFileSync(
-        path.join(__dirname, '../db/db.json'),
-        JSON.stringify(notes, null, 2)
-    )
 
     return notes;
 }
 
 //remove a note from the database
-function deleteNote(id, db){
-    db = db.filter(note => {
+function deleteNote(id, notes){
+    const updatedNotes = notes.filter(note => {
         if(note.id !== id){
             return note;
         }
     })
 
-    updatedDb = JSON.stringify(db);
-
-    fs.writeFile('../Note-Taker/db/db.json', updatedDb, err => {
-        if(err){
-            console.log(err);
-        }
-    });
-
-    return db;
+    return updatedNotes;
 }
 
 module.exports = {
