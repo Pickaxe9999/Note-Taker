@@ -1,5 +1,12 @@
 # Note-Taker
 
+##Home page
+![image](https://user-images.githubusercontent.com/103781767/180578915-31ece95e-fa27-40a1-8851-dd37af4f69f5.png)
+
+
+##Note taking page
+![image](https://user-images.githubusercontent.com/103781767/180578948-864c3ae0-4aab-4121-b8a0-41ecf33ce42a.png)
+
 
 
 ## Table of contents
